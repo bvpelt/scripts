@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Description:
+# remove all docker containers which are not in use
+#
+
+docker rm -v $(docker ps -aq -f status=exited)
+
